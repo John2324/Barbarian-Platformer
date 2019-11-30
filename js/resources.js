@@ -8,5 +8,10 @@ game.resources = [
         name: "level01",
         type: "tmx",
         src: "data/map/level01.tmx"
+    },
+    {
+        name: "walkingBarbarian",
+        type: "image",
+        src: "data/img/sprite/walkingBarbarian.png"
     }
 ];
