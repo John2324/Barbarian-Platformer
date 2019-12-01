@@ -9,7 +9,7 @@
  <imagelayer id="7" name="Parallax1">
   <image source="../img/background1.png" width="960" height="768"/>
   <properties>
-   <property name="ratio" value="0.20"/>
+   <property name="ratio" value="0.15"/>
   </properties>
  </imagelayer>
  <imagelayer id="8" name="Parallax2">

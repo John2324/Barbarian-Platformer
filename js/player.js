@@ -70,7 +70,6 @@ game.PlayerEntity = me.Entity.extend({
           }
         } else {
           this.body.force.y = 0;
-          this.renderable.setCurrentAnimation("stand");
         }
   
         // apply physics to the body (this moves the entity)
