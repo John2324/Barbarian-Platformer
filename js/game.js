@@ -18,6 +18,12 @@ var game = {
 
     // Run on game resources loaded.
     loaded : function () {
+        //Animate certain player sprite motions
+        //game.texture = new me.video.renderer.Texture(
+          //  me.loader.getJSON("walkingBarbarian"),
+            //me.loader.getImage("walkingBarbarian")
+        //);
+
         // Setting up game screens
         me.state.set(me.state.PLAY, new game.PlayScreen());
 

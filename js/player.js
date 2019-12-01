@@ -11,18 +11,21 @@ game.PlayerEntity = me.Entity.extend({
       this.body.setFriction(0.6, 0);
   
       // set the display to follow our position on both axis
-      me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH, 0.4);
+      me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH, 0.5);
   
       // ensure the player is updated even when outside of the viewport
       this.alwaysUpdate = true;
+
+      // define a jumping animation
+      this.renderable.addAnimation("jumping", [30, 31, 32, 33, 34, 35], 40);
   
-      // define a basic walking animation (using all frames)
-      this.renderable.addAnimation("walk",  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], 30);
+      // define a basic standing animation
+      this.renderable.addAnimation("stand", [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 23], 15);
   
-      // define a standing animation (using the first frame)
-      this.renderable.addAnimation("stand",  [5]);
+      // define a walking animation
+      this.renderable.addAnimation("walk", [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59], 35);
   
-      // set the standing animation as default
+      // set initial standing animation as default
       this.renderable.setCurrentAnimation("stand");
     },
   
@@ -50,7 +53,7 @@ game.PlayerEntity = me.Entity.extend({
             // change to the walking animation
             if (!this.renderable.isCurrentAnimation("walk")) {
                 this.renderable.setCurrentAnimation("walk");
-            }
+            }            
         } else {
             this.body.force.x = 0;
             // change to the standing animation
@@ -58,15 +61,16 @@ game.PlayerEntity = me.Entity.extend({
         }
   
         if (me.input.isKeyPressed('jump')) {
-  
-            if (!this.body.jumping && !this.body.falling)
-            {
-                // set current vel to the maximum defined value
-                // gravity will then do the rest
-                this.body.force.y = -this.body.maxVel.y
-            }
+
+          if (!this.body.jumping && !this.body.falling)
+          {
+              // set current vel to the maximum defined value
+              // gravity will then do the rest
+              this.body.force.y = -this.body.maxVel.y
+          }
         } else {
-            this.body.force.y = 0;
+          this.body.force.y = 0;
+          this.renderable.setCurrentAnimation("stand");
         }
   
         // apply physics to the body (this moves the entity)

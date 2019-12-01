@@ -11,6 +11,11 @@ game.resources = [
     },
     {
         name: "walkingBarbarian",
+        type: "json",
+        src: "data/img/sprite/walkingBarbarian.json"
+    },
+    {
+        name: "walkingBarbarian",
         type: "image",
         src: "data/img/sprite/walkingBarbarian.png"
     }
