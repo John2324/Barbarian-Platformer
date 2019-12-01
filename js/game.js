@@ -29,11 +29,11 @@ var game = {
         me.state.transition("fade", "#000", 250);
 
         // Key bindings
-        me.input.bindKey(me.input.KEY.A,  "left");
-        me.input.bindKey(me.input.KEY.LEFT,  "left");
+        me.input.bindKey(me.input.KEY.A, "left");
+        me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.D, "right");
         me.input.bindKey(me.input.KEY.RIGHT, "right");
-        me.input.bindKey(me.input.KEY.SPACE,  "jump", true);
+        me.input.bindKey(me.input.KEY.SPACE, "jump", true);
 
         // Start the game.
         me.state.change(me.state.PLAY);
