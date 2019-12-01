@@ -18,5 +18,15 @@ game.resources = [
         name: "walkingBarbarian",
         type: "image",
         src: "data/img/sprite/walkingBarbarian.png"
+    },
+    {
+        name: "background1",
+        type: "image",
+        src: "data/img/background1.png"
+    },
+    {
+        name: "background2",
+        type: "image",
+        src: "data/img/background2.png"
     }
 ];
