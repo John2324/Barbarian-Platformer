@@ -8,7 +8,7 @@ game.PlayerEntity = me.Entity.extend({
   
       // max walking & jumping speed
       this.body.setMaxVelocity(5, 18);
-      this.body.setFriction(0.6, 0);
+      this.body.setFriction(0.5, 0);
   
       // set the display to follow our position on both axis
       me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH, 0.5);
