@@ -20,6 +20,11 @@ game.resources = [
         src: "data/img/sprite/walkingBarbarian.png"
     },
     {
+        name: "runningKnight",
+        type: "image",
+        src: "data/img/sprite/runningKnight.png"
+    },
+    {
         name: "background1",
         type: "image",
         src: "data/img/background1.png"
@@ -28,5 +33,10 @@ game.resources = [
         name: "background2",
         type: "image",
         src: "data/img/background2.png"
+    },
+    {
+        name: "coinsSprite",
+        type: "image",
+        src: "data/img/sprite/coinsSprite.png"
     }
 ];

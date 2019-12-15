@@ -24,6 +24,8 @@ var game = {
 
         // Entities
         me.pool.register("walkingBarbarian", game.PlayerEntity);
+        me.pool.register("coinsSprite", game.CoinEntity);
+        me.pool.register("runningKnight", game.EnemyEntity);
 
         // Set a global fading transition for the screen
         me.state.transition("fade", "#000", 250);

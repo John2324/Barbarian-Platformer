@@ -66,12 +66,12 @@ game.PlayerEntity = me.Entity.extend({
           {
               // set current vel to the maximum defined value
               // gravity will then do the rest
-              this.body.force.y = -this.body.maxVel.y
+              this.body.vel.y = -this.body.maxVel.y * me.timer.tick;
+
+              this.body.jumping = true;
           }
-        } else {
-          this.body.force.y = 0;
-        }
-  
+        } 
+
         // apply physics to the body (this moves the entity)
         this.body.update(dt);
   
@@ -91,3 +91,4 @@ game.PlayerEntity = me.Entity.extend({
       return true;
     }
   });
+  
