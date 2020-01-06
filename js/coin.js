@@ -1,6 +1,3 @@
-/**
- * a Coin entity
- */
 game.CoinEntity = me.CollectableEntity.extend({
     // extending the init function is not mandatory
     // unless you need to add some extra initialization
